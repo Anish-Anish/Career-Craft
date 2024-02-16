@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Job Search</title>
+   {{!-- <link rel="stylesheet" href="css/bootstrap.css"> --}}
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   <script defer src="js/jquery.js"></script>
+   <script defer src="js/axios.js"></script>
+   <script defer src="js/typed.js"></script>
+   <script defer src="js/main.js"></script>
+</head>
+
+<body>
+   <div class="navbar">
+      <div class="title">
+         <p> <a href="/"> Job Search </a> </p>
+      </div>
+      <div>
+         <ul>
+            <li><a href="/">Home </a></li>
+            <li><a href="/search" class="active">Jobs </a></li>
+            <li><a href="/about">About Us </a></li>
+            <li><a href="/contact">Contact Us </a></li>
+         </ul>
+      </div>
+   </div>
+
+
+   <main>
+      <div class="searchbar">
+         <form action="search" method="get">
+            <input type="text" id="query" name="q" placeholder="Job Title....">
+
+            <button type="submit">Find Jobs</button>
+         </form>
+      </div>
+
+      <div class="show-jobs">
+
+         {{# each jobs }}
+         <div class="card">
+
+            <div class="card-title">
+               <h2>{{this.title}}</h2>
+            </div>
+            <br>
+            <div class="summary">
+               {{this.summary}}
+            </div>
+            <br>
+            <b>Salary : </b> {{this.salary}}
+            <br>
+            <div class="url">
+               <a href="{{this.url}}">Read More</a>
+            </div>
+         </div>
+         {{/each}}
+
+      </div>
+
+   </main>
+
+   <footer>
+      <div class="social-media">
+         FOllOW US ON: <br><br>
+         <div class="media">
+            <a href="https://www.instagram.com/thi_dark_sun/"><i class="fab fa-instagram fa-3x"></i></a> &nbsp;
+            <a href="https://www.github.com/Anish-Anish"><i class="fab fa-github fa-3x"></i></a>&nbsp;
+         </div>
+      </div>
+   </footer>
+</body>
+
+</html>

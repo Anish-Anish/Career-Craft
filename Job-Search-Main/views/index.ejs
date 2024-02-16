@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Job Search</title>
+   {{!-- <link rel="stylesheet" href="css/bootstrap.css"> --}}
+   <link rel="stylesheet" href="css/style.css">
+   <link href="https://fonts.googleapis.com/css?family=Nunito|Barlow+Condensed|Fredoka+One" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   <script defer src="js/axios.js"></script>
+   <script defer src="js/jquery.js"></script>
+   <script defer src="js/typed.js"></script>
+   <script defer src="js/main.js"></script>
+</head>
+
+<body>
+   <div class="navbar">
+      <div class="title">
+         <p> <a href="/"> Job Search </a></p>
+      </div>
+      <div>
+         <ul>
+            <li><a href="/" class="active">Home </a></li>
+            <li><a href="/search">Jobs </a></li>
+            <li><a href="/about">About Us </a></li>
+            <li><a href="/contact">Contact Us </a></li>
+         </ul>
+      </div>
+   </div>
+
+   <main>
+      <div class="typer">
+         <div class="main-image"></div>
+         <div class="type-center">
+            <div id="typed-strings">
+               <p>Want <strong>Job</strong> !!!</p>
+               <p>Get <strong>Job</strong> here...</p>
+            </div>
+            <span id="typed"></span>
+         </div>
+      </div>
+
+      <div id="jobs">
+         <form action="/search" method="get">
+            <input type="text" name="q" placeholder="Job Title...." id="input-form">
+            <button style="padding-left: 13px;padding-right: 13px;margin-left: 17px;" type="submit">
+               <i class="fas fa-search"></i>
+            </button>
+         </form>
+      </div>
+   </main>
+
+   <footer>
+      <div class="social-media">
+         FOllOW US ON: <br><br>
+         <div class="media">
+            <a href="https://www.instagram.com/thi_dark_sun/"><i class="fab fa-instagram fa-3x"></i></a> &nbsp;
+            <a href="https://www.github.com/Anish-Anish"><i class="fab fa-github fa-3x"></i></a>&nbsp;
+         </div>
+      </div>
+   </footer>
+  
+</body>
+
+</html>
